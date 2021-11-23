@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Cast2Gif v1.0.0 Coded by @foubian</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="lib/xtermjs/xterm.css" />
+	<script src="lib/xtermjs/xterm.js"></script>
+	<script src="lib/omggif.js"></script>
+	<!-- MDB icon -->
+	<link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+	<!-- Google Fonts Roboto -->
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+	<!-- MDB -->
+	<link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+
+<body>
+	<div style="width: 100px; height: 100px; float: right; display: inline-block"></div>
+	<a href="https://github.com/foubian">
+		<img style="position: absolute; top: 0; right: 0; border: 0; width: 149px; height: 149px;"
+			src="forkme_right_white_ffffff.png" alt="Fork me on GitHub">
+	</a>
+	<!-- Start your project here-->
+	<div class="container">
+
+		<section>
+			<div class="text-center">
+				<h4><strong>Cast2Gif v1.0.0</strong></h4>
+				<a class="btn btn-primary bg-theme mb-5" href="https://github.com/foubian" role="button">Coded By
+					Foubian</a>
+			</div>
+			<p class="note note-primary">
+				<strong>Note primary:</strong> Select an asciinema cast file, configure options, then click Render to
+				generate an animated GIF.
+
+				The animated GIF can be saved by clicking download icon.
+			</p>
+
+
+			<div class="row">
+				<form autocomplete="off">
+					<fieldset id="fieldset">
+						<section class="shadow-5 p-4">
+							<div class="col-md-10 mb-4">
+								<!--Section: Checkout form-->
+
+
+								<!-- 2 column grid layout with text inputs for the first and last names -->
+								<div class="row mb-4">
+
+									<!-- File input -->
+									<div class="form-file mb-4">
+
+										<label class="form-label fw-bold">File to rend:
+											<i id="spinfileok" class="fa fa-check-circle green"
+												style="visibility: hidden"></i>
+										</label>
+										<div id="spinfile" class="spinner-border spinner-border-sm text-danger mx-2"
+											role="status">
+											<span class="visually-hidden">Loading...</span>
+										</div>
+
+
+										<input id="file_selector" type="file" accept="application/x-asciicast, .cast"
+											value="" class="form-control">
+
+									</div>
+									<!-- File input -->
+									<div class="form-file mb-4">
+										<label class="fw-bold form-label">Size:</label>
+										<select id="size" class="form-select" aria-label="Default select example">
+											<option value="10">extra small</option>
+											<option value="15">small</option>
+											<option value="20" selected="selected">medium</option>
+											<option value="25">large</option>
+											<option value="30">extra large</option>
+										</select>
+									</div>
+									<div class="form-file mb-4">
+										<label class="fw-bold form-label">Contrast Gain:</label>
+										<select id="contrast_gain" class="form-select"
+											aria-label="Default select example">
+											<option value="1" selected="selected">none</option>
+											<option value="4.5">low</option><!-- Minimum for WCAG AA compliance -->
+											<option value="7">medium</option><!-- Minimum for WCAG AAA compliance -->
+											<option value="14">high</option>
+											<option value="21">full</option><!-- White on black or black on white -->
+										</select>
+									</div>
+									<div class="form-file mb-4">
+										<label class="fw-bold form-label">Cursor:</label>
+										<select id="cursor" class="form-select" aria-label="Default select example">
+											<option>bar</option>
+											<option selected="selected">block</option>
+											<option>none</option>
+											<option>underline</option>
+										</select>
+									</div>
+									<div class="form-file mb-4">
+										<label class="fw-bold form-label">Font:</label>
+										<label id="fontshow" class="form-label">(This is howfont look like...)</label>
+										<select id="font" class="form-select" aria-label="Default select example">
+											<option id="initial_font">monospace</option>
+										</select>
+									</div>
+									<div class="form-file mb-2">
+										<label class="fw-bold form-label">Theme:</label>
+										<select id="theme" class="form-select" aria-label="Default select example">
+										</select>
+									</div>
+									<!--Section: Checkout form-->
+								</div>
+								<div class="col-md-12 mb-4">
+									<img id="imgshow" class="img-fluid" />
+									<div id="loading">
+										<div  id="progressb" class="progress">
+											<div id="progress" class="progress-bar bg-success" role="progressbar" style="width: 0%"
+												 aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<br>
+
+									<!-- Submit button -->
+									<button id="render_button" disabled class="btn btn-primary btn-block">
+										Render
+									</button>
+								</div>
+
+						</section>
+					</fieldset>
+				</form>
+			</div>
+		</section>
+	</div>
+	<!-- End your project here-->
+	<footer class="bg-primary text-white">
+
+		<!-- Copyright -->
+		<div class="text-center p-3" style="
+			background-color: rgba(0, 0, 0, 0.2);
+			color: rgba(255, 255, 255, 0.6);
+		  ">
+			© 2020 Copyright:
+			<a class="text-white" href="#">
+				Coded with <label class="text-danger"> ♥ </label> by @foubian</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+
+	<!-- MDB -->
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script type="text/javascript" src="js/download.js"></script>
+	<div id="modal"></div>
+	<!-- Custom scripts -->
+	<script src="main2.js"></script>
+</body>
+
+</html>
