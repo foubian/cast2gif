@@ -17,3 +17,29 @@ git clone https://github.com/foubian/cast2gif.git
 2- Put cloned folder in your web's path.
 
 3- Enjoy converting your .cast file to gif by choising many options.
+
+# Steps to do :
+**1-**
+![1](https://user-images.githubusercontent.com/19433107/143050956-6d2cfc80-f13d-4b8d-a1cb-c20f8b45b94d.png)
+
+**2-**
+![2](https://user-images.githubusercontent.com/19433107/143050964-cf2ff718-5815-4a9c-82bf-852a70f3160a.png)
+
+**3-**
+![3](https://user-images.githubusercontent.com/19433107/143050966-21a27486-92bd-4b29-be6c-8da53e81f966.png)
+
+**4-**
+![4](https://user-images.githubusercontent.com/19433107/143050970-270a6e0b-7b74-403f-8218-d0d5c600e5d0.png)
+
+**5-**
+![5](https://user-images.githubusercontent.com/19433107/143050974-c4e575b8-da96-4b12-b03d-3f559045eb31.png)
+
+**6-**
+![6](https://user-images.githubusercontent.com/19433107/143050975-cebdfbe1-1872-4bb4-b00b-95318c39347e.png)
+
+**7-**
+![7](https://user-images.githubusercontent.com/19433107/143050976-b8f6cdd8-d701-47d2-804e-4bbe47f4cbc7.png)
+
+**8-**
+![8](https://user-images.githubusercontent.com/19433107/143050979-16df8c2f-55a6-45f5-81a9-99d2138f98f9.png)
+
